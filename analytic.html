@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Screen</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style1.css">
+  <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"> </script>
+</head>
+    <body>
+                <div class="container-fluid">
+      <main>
+        <div class="row">
+    <div class="col">
+      <div class="back">
+      <a href="index.html" class="previous round">&#8249;</a></div>
+    </div>
+    <div class="col">
+      <div class="navbar__right">
+          <a href="#">
+            <img width="60" src="img/profile.svg" alt="" />
+          </a>
+        </div>
+    </div>
+  </div>
+        <div class="main__container">
+          
+            <div class="card_title">
+              <i class="fa fa-user fa-5x text-red" aria-hidden="true"></i>
+              <div class="card_inner">
+                
+                <span class="font-bold text-title"><div class = "ycom"> Paul Grahman <br>paul@ycombinator.com <button class="font-bold text-title">Ycombinator</button></div></span>
+              </div>
+            </div>
+        </div>
+             <nav class="navbar">
+       
+       <div id="myDIV">
+        <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html"> Interaction</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="analytic.html"> Analytics</a>
+      </li>
+    </ul>
+</div>
+
+      </nav>
+<br><br><br>
+              <div class="container">
+            <canvas id="myChart1" ></canvas><br><br><br><br><br>
+            <canvas id="myChart2"></canvas>
+            <br><br><br><br><br>
+            <canvas id="myChart3"></canvas>
+            </div>
+           
+            <script>
+              var ctx = document.getElementById('myChart1').getContext('2d');
+              var chart = new Chart(ctx, {
+              type: 'bar',
+        data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+            label: 'Graph one',
+            backgroundColor: 
+            [
+            "#f38b4a",
+          "#56d798",
+          "#ff8397",
+          "#6970d5", 
+          "#cdaac0",
+          "#2e2e2e",
+          "#be4eff",
+            ],
+            hoverBackgroundColor: "#C70039 ",
+            borderColor: 'rgb(255, 99, 132)',
+            data: [12, 10, 5, 2, 20, 30, 45]
+        }]
+    }
+});
+              var ctx = document.getElementById('myChart2').getContext('2d');
+              var chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+            label: 'Graph two',
+            backgroundColor: "#C70039",
+            hoverBackgroundColor: "#C70039 ",
+            borderColor: 'rgb(255, 99, 132)',
+            data: [12, 10, 5, 2, 20, 30, 45]
+        }]
+    },
+});
+               var ctx = document.getElementById('myChart3').getContext('2d');
+              var chart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+            label: 'Graph three',
+            backgroundColor: 
+            [
+            "#f38b4a",
+          "#56d798",
+          "#ff8397",
+          "#6970d5", 
+          "#cdaac0",
+          "#2e2e2e",
+          "#be4eff",
+            ],
+            hoverBackgroundColor: "#C70039 ",
+            borderColor: 'rgb(255, 99, 132)',
+            data: [12, 10, 5, 2, 20, 30, 45]
+        }]
+    }
+});
+</script>
+</main>
+</body>
+</html>
